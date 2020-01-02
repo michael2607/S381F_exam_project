@@ -1,0 +1,42 @@
+<html>
+	<head>	
+		
+        <style> img {width: 50%;height: auto;}</style>
+	</head>
+
+	<body onload="show()">
+		<div class='container'>
+			<h1><%=title%></h1>
+			<h4><%=description%></h4><hr>
+			
+			<p id="photo"></p>			
+			<p>make: <%=make%></p>
+			<p>model: <%=model%></p>
+			<p>createon: <%=createon%></p>
+			
+				
+			<p>
+				
+				<button onclick="window.location.href = '/new';">home</button>
+				
+			</p>			
+		</div>	
+	</body>
+</html>
+			<script>
+				function show() {
+					var show = <%=showphoto%>;
+					
+					
+					if (show === true) {
+						photo = '<img src="data:<%=mimetype%>;base64, <%=photo%>"><hr>';
+					} else{
+						photo = 'NO PHOTO';
+					}
+					
+														
+					
+					document.getElementById("photo").innerHTML = photo;
+									
+				}
+			</script>
