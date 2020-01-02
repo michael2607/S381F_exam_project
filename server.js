@@ -3,7 +3,7 @@ var session = require('cookie-session');
 var bodyParser = require('body-parser');
 var url = require('url');
 var app = express();
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs' , 'exif');
 var fs = require('fs');
 var MongoClient = require('mongodb').MongoClient;
 var assert = require ('assert');
